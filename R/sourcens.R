@@ -18,7 +18,7 @@ sourcens <- function(path) {
   ll <- parse(file = path)
 
   for (i in seq_along(ll)) {
-    print(i)
+    #print(i)
     tryCatch(eval(ll[[i]], envir = ns),
              error = function(e) message("Oops!  ", as.character(e)))
 
