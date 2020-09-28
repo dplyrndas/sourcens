@@ -24,6 +24,7 @@ sourcens <- function(path) {
 
   }
 
-
   base::namespaceExport(ns, ls(ns))
+
+  invisible()
 }
