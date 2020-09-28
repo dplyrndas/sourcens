@@ -1,0 +1,4 @@
+Name: Search function imported with sourcens
+Description: Searches at the cursor position.
+Binding: searchSourceNSFuncAddin
+Interactive: false
