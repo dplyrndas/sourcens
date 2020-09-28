@@ -1,3 +1,5 @@
+pacman::p_load(namespace)
+
 #' @title Load a file into a corresponding namespace.
 #' @description Load a file into a corresponding namespace.
 #' Errors are shown but execution is continued.
@@ -9,7 +11,7 @@ sourcens <- function(path) {
 
   nsName <- gsub('.R$', '', path)
   ns0 <- namespace::getRegisteredNamespace(nsName)
-  unloadNamespace(ns0)
+  base::unloadNamespace(ns0)
 
   ns <- namespace::makeNamespace(nsName)
 
