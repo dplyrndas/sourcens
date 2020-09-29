@@ -26,7 +26,21 @@ sourcens <- function(path) {
 
   base::namespaceExport(ns, ls(ns))
 
-  invisible()
+  invisible(0)
+}
+
+sourcegl <- function(path) {
+
+  ll <- parse(file = path)
+
+  for (i in seq_along(ll)) {
+    # print(i)
+    tryCatch(eval(ll[[i]], .GlobalEnv),
+             error = function(e) message("Oops!  ", as.character(e)))
+
+  }
+
+  invisible(0)
 }
 
 #' navigation Addin:
